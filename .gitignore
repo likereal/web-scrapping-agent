@@ -1,0 +1,14 @@
+# Sensitive configs
+.env
+t1/src/core/config.py
+
+# Python stuff
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Project specific
+t1/logs/
+t1/data/
