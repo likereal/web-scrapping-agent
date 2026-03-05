@@ -33,7 +33,8 @@ def process_notifications():
                c.search_url
         FROM product_events e
         JOIN current_products c
-          ON e.product_id = c.product_id
+          ON e.platform = c.platform
+         AND e.product_id = c.product_id
         WHERE e.notified = 0
     """)
 
@@ -49,7 +50,7 @@ def process_notifications():
 *{name}*
 Price: ₹{new_price}
 
-[View on Blinkit]({url})
+[View Product]({url})
 """
 
         elif event_type == "PRICE_OR_STOCK_CHANGE":
@@ -59,7 +60,7 @@ Price: ₹{new_price}
 *{name}*
 New Price: ₹{new_price}
 
-[View on Blinkit]({url})
+[View Product]({url})
 """
 
         else:
