@@ -1,0 +1,2 @@
+--need to store processed prompts -elements for semantic search and reinforcemnt learning
+--need to add vector dbs(faiss)

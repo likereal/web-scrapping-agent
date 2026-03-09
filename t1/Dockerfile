@@ -24,5 +24,11 @@ RUN apt-get update && \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 USER airflow
-RUN pip install --no-cache-dir playwright
+RUN pip install --no-cache-dir \
+    playwright \
+    sentence-transformers \
+    faiss-cpu \
+    numpy \
+    beautifulsoup4 \
+    requests
 RUN playwright install chromium
